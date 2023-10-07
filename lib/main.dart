@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soil_analysis/screens/firstpage.dart';
 import 'package:soil_analysis/screens/homescreen.dart';
 
 void main() {
@@ -10,9 +11,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return   MaterialApp(
       
-      home:  homescreeen(),
+      home:   homescreeen(),
     );
   }
 }

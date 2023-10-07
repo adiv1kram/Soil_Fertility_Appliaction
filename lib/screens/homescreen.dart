@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soil_analysis/screens/firstpage.dart';
 
 class homescreeen extends StatelessWidget {
   @override
@@ -24,19 +25,27 @@ class homescreeen extends StatelessWidget {
             const SizedBox(
               height: 250,
             ),
-            ElevatedButton.icon(onPressed: () {}, icon: const Icon(Icons.arrow_right), 
-             style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      backgroundColor: const Color.fromARGB(255, 5, 43, 48),
-                      fixedSize: const Size(350, 30),
-                      foregroundColor: Colors.white),
-            label:const Text('get started',
-            style:TextStyle(
-              color: Color.fromARGB(255, 255, 251, 251),
-              fontWeight: FontWeight.bold,
-            ), 
-            ) )
+            ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FirstPageScreen()));
+                },
+                icon: const Icon(Icons.arrow_right),
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    backgroundColor: const Color.fromARGB(255, 5, 43, 48),
+                    fixedSize: const Size(350, 30),
+                    foregroundColor: Colors.white),
+                label: const Text(
+                  'get started',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 251, 251),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ))
           ],
         ),
       )),
