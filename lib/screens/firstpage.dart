@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soil_analysis/screens/mapscreen.dart';
 
 class FirstPageScreen extends StatefulWidget {
   const FirstPageScreen({super.key});
@@ -26,8 +27,9 @@ class _FirstPageState extends State<FirstPageScreen> {
       '  ph of the soil',
       style: optionStyle,
     ),
-    Text(' Moisture of the soil',
-    style: optionStyle,
+    Text(
+      ' Moisture of the soil',
+      style: optionStyle,
     )
   ];
 
@@ -81,7 +83,8 @@ class _FirstPageState extends State<FirstPageScreen> {
               title: const Text('Map'),
               selected: _selectedIndex == 0,
               onTap: () {
-                _onItemTapped(0);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => MapScreen())));
               },
             ),
             ListTile(
