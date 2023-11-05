@@ -46,6 +46,7 @@ class _FirstPageState extends State<FirstPageScreen> {
       appBar: AppBar(
         title: const Text('Some random name'),
         backgroundColor: Colors.lightGreenAccent,
+        toolbarHeight: 50,
       ),
       body: Center(
         child: _widgetOptions[_selectedIndex],
