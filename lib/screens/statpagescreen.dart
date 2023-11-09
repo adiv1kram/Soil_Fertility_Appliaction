@@ -5,31 +5,55 @@ class statpagescreen extends StatefulWidget {
   State<statpagescreen> createState() => _statpagescreen();
 }
 
+// ignore: camel_case_types
 class _statpagescreen extends State<statpagescreen> {
+  int myIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(236, 237, 32, 25),
+        backgroundColor: Color.fromARGB(235, 25, 131, 237),
         title: const Text(
-          "Stat Page",
-          style: TextStyle(
-            decorationColor: Color.fromARGB(236, 237, 32, 25),
-            color: Color.fromARGB(235, 220, 213, 212),
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
-            fontFamily: 'Montserrat-Medium.ttf',
-          ),
+          'Stat Page',
+          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
         ),
-        toolbarHeight: 100,
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            if (myIndex == 0)
+              // you can call custom widget here
+              const Column(
+                children: [
+                  Text("0"),
+                ],
+              )
+            else if (myIndex == 1)
+              const Column(
+                children: [
+                  Text("1"),
+                ],
+              ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        onTap: (index) {
+          setState(() {
+            myIndex = index;
+          });
+        },
+        currentIndex: myIndex,
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
-            backgroundColor: Color.fromARGB(236, 237, 32, 25),
+            label: 'Map',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'home',
+          )
         ],
       ),
     );
