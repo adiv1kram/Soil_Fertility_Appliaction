@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:soil_analysis/screens/mapscreen.dart';
+import 'package:soil_analysis/screens/statsscreen.dart';
 
 class statpagescreen extends StatefulWidget {
   const statpagescreen({super.key});
@@ -8,52 +10,34 @@ class statpagescreen extends StatefulWidget {
 // ignore: camel_case_types
 class _statpagescreen extends State<statpagescreen> {
   int myIndex = 0;
+  final List<Widget> _children = [
+    MapScreen(),
+    StatScreen(),
+  ];
+  void onTabTapped(int index) {
+    setState(() {
+      myIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(235, 25, 131, 237),
+        backgroundColor: const Color.fromARGB(235, 25, 131, 237),
         title: const Text(
-          'Stat Page',
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
+          'Sensor Information',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            if (myIndex == 0)
-              // you can call custom widget here
-              const Column(
-                children: [
-                  Text("0"),
-                ],
-              )
-            else if (myIndex == 1)
-              const Column(
-                children: [
-                  Text("1"),
-                ],
-              ),
-          ],
-        ),
-      ),
+      body: _children[myIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          setState(() {
-            myIndex = index;
-          });
-        },
         currentIndex: myIndex,
+        onTap: onTabTapped,
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.map),
-            label: 'Map',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'home',
-          )
+              icon: Icon(Icons.table_chart), label: 'Stats'),
         ],
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:soil_analysis/screens/firstpage.dart';
 import 'package:soil_analysis/screens/homescreen.dart';
 import 'package:soil_analysis/screens/statpagescreen.dart';
 
@@ -13,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: statpagescreen(),
+      home: homescreeen(),
     );
   }
 }

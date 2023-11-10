@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soil_analysis/screens/firstpage.dart';
+import 'package:soil_analysis/screens/statpagescreen.dart';
 
 class homescreeen extends StatelessWidget {
   @override
@@ -30,7 +30,7 @@ class homescreeen extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FirstPageScreen()));
+                          builder: (context) => const statpagescreen()));
                 },
                 icon: const Icon(Icons.arrow_right),
                 style: ElevatedButton.styleFrom(
