@@ -5,6 +5,7 @@ import 'package:soil_analysis/widgets/HorizontalCard.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:soil_analysis/widgets/RadialGauge.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class StatScreen extends StatefulWidget {
@@ -30,7 +31,11 @@ class _StatScreenState extends State<StatScreen> {
                 height: 12,
               ),
               HorizontalBarGraph(),
-             
+              Row(
+                children: [
+                  RadialGauge(),
+                ],
+              )
             ],
           ),
         ],
@@ -38,4 +43,3 @@ class _StatScreenState extends State<StatScreen> {
     );
   }
 }
-
