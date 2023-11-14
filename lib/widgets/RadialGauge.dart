@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class RadialGauge extends StatefulWidget {
+class RadialGaugeWidget extends StatefulWidget {
   @override
   _RadialGaugeState createState() => _RadialGaugeState();
 }
 
-class _RadialGaugeState extends State<RadialGauge> {
+class _RadialGaugeState extends State<RadialGaugeWidget> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Container(
+          child: SizedBox(
             height: 150,
             width: 150,
             child: SfRadialGauge(axes: <RadialAxis>[
