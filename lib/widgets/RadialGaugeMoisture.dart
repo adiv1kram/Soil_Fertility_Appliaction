@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class RadialGauge extends StatefulWidget {
+class RadialGaugeMoisture extends StatefulWidget {
   @override
   _RadialGaugeState createState() => _RadialGaugeState();
 }
 
-class _RadialGaugeState extends State<RadialGauge> {
+class _RadialGaugeState extends State<RadialGaugeMoisture> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
