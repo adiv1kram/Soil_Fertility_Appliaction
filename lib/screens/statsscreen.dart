@@ -18,7 +18,25 @@ class _StatScreenState extends State<StatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RadialGauge(),
+      
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HorizontalCard(title: "Blank", body: const Text("Blank")),
+            HorizontalBarGraph(),
+
+            AspectRatio(
+              aspectRatio: 2,
+              child: Row(
+                children: [
+                  AspectRatio(aspectRatio: 1,child: RadialGaugeWidget(),),
+                  AspectRatio(aspectRatio: 1,child: RadialGaugeMoisture(),)
+                ],
+              ),
+            )
+          ],
+        ),
+      )
     );
   }
 }
