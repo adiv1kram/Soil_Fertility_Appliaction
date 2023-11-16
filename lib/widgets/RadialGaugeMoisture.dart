@@ -12,7 +12,7 @@ class _RadialGaugeState extends State<RadialGaugeMoisture> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Container(
+          child: SizedBox(
             height: 150,
             width: 150,
             child: SfRadialGauge(axes: <RadialAxis>[
