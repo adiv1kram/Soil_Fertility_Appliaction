@@ -26,7 +26,10 @@ class _HorizontalCardState extends State<HorizontalCard> {
         children: [
           Text(
             widget.title,
-            style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black),
           ),
           const SizedBox(height: 8.0),
         ],

@@ -24,7 +24,7 @@ class _statpagescreen extends State<statpagescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(235, 25, 131, 237),
+        backgroundColor: Color.fromARGB(235, 23, 219, 219),
         title: const Text(
           'Sensor Information',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
@@ -32,6 +32,7 @@ class _statpagescreen extends State<statpagescreen> {
       ),
       body: _children[myIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 231, 138, 169),
         currentIndex: myIndex,
         onTap: onTabTapped,
         items: const [

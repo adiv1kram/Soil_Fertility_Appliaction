@@ -11,6 +11,7 @@ class _RadialGaugeState extends State<RadialGaugeMoisture> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Center(
           child: SizedBox(
             height: 150,
