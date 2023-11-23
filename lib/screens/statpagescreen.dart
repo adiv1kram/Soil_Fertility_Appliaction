@@ -32,7 +32,7 @@ class _statpagescreen extends State<statpagescreen> {
       ),
       body: _children[myIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 231, 138, 169),
+        backgroundColor: Colors.transparent,
         currentIndex: myIndex,
         onTap: onTabTapped,
         items: const [

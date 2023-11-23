@@ -31,10 +31,12 @@ class _StatScreenState extends State<StatScreen> {
           child: Column(
             children: [
               HorizontalCard(
-                  title: "Blank",
-                  body: const Text(
-                    "Blank",
-                  )),
+                title: "Blank",
+                body: const Text(
+                  "Blank",
+                ),
+                backgroundColor: Colors.blueGrey,
+              ),
               HorizontalBarGraph(),
               AspectRatio(
                 aspectRatio: 2,
