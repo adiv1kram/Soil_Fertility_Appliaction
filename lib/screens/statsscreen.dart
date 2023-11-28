@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:soil_analysis/widgets/HorizontalBarGrph.dart';
 import 'package:soil_analysis/widgets/HorizontalCard.dart';
-
-import 'dart:async';
-
 import 'package:soil_analysis/widgets/RadialGauge.dart';
 import 'package:soil_analysis/widgets/RadialGaugeMoisture.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class StatScreen extends StatefulWidget {
   @override
@@ -31,12 +27,9 @@ class _StatScreenState extends State<StatScreen> {
           child: Column(
             children: [
               HorizontalCard(
-                title: "Blank",
-                body: const Text(
-                  "Blank",
-                ),
-                backgroundColor: Colors.blueGrey,
-              ),
+                  title: "Recommended Crops",
+                  body: "Wheat",
+                  backgroundColor: Colors.transparent),
               HorizontalBarGraph(),
               AspectRatio(
                 aspectRatio: 2,

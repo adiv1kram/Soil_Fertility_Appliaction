@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HorizontalCard extends StatefulWidget {
   final String title;
-  final Widget body;
+  final String body;
   final Color? backgroundColor;
   HorizontalCard(
       {required this.title, required this.body, this.backgroundColor});
@@ -29,9 +29,16 @@ class _HorizontalCardState extends State<HorizontalCard> {
             style: const TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.black),
+                color: Color.fromARGB(255, 0, 0, 0)),
           ),
           const SizedBox(height: 8.0),
+          Text(
+            widget.body,
+            style: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.w300,
+                color: Color.fromARGB(255, 0, 0, 0)),
+          ),
         ],
       ),
     );
